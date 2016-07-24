@@ -18,10 +18,11 @@ uint32_t murmur16(uint64_t data1, uint64_t data2); // 16 bytes
 }
 #endif
 
+#endif // INCLUDE_MURMUR3_HASH_H
+
 // -----------------------------------------------------------------------------
 
 #ifdef MURMUR_IMPLEMENTATION
-
 
 // based on https://github.com/aappleby/smhasher/blob/master/src/MurmurHash3.cpp
 // MurmurHash3 was written by Austin Appleby, and is placed in the public
@@ -125,4 +126,3 @@ uint32_t murmur16(uint64_t data1, uint64_t data2)
 }
 
 #endif // MURMUR_IMPLEMENTATION
-#endif // INCLUDE_MURMUR3_HASH_H
