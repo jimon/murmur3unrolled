@@ -13,7 +13,6 @@ uint32_t murmur16(uint64_t data1, uint64_t data2); // 16 bytes
 
 // -----------------------------------------------------------------------------
 
-#define MURMUR_IMPLEMENTATION
 #ifdef MURMUR_IMPLEMENTATION
 
 // based on https://github.com/aappleby/smhasher/blob/master/src/MurmurHash3.cpp
