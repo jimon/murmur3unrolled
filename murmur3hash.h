@@ -1,19 +1,27 @@
+#ifndef INCLUDE_MURMUR3_HASH_H
+#define INCLUDE_MURMUR3_HASH_H
 
-#pragma once
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include <stdint.h>
 
 // -----------------------------------------------------------------------------
-
 // murmur 32 bit hashes for small inputs
 
 uint32_t murmur4 (uint32_t data); // 4 bytes
 uint32_t murmur8 (uint64_t data); // 8 bytes
 uint32_t murmur16(uint64_t data1, uint64_t data2); // 16 bytes
 
+#ifdef __cplusplus
+}
+#endif
+
 // -----------------------------------------------------------------------------
 
 #ifdef MURMUR_IMPLEMENTATION
+
 
 // based on https://github.com/aappleby/smhasher/blob/master/src/MurmurHash3.cpp
 // MurmurHash3 was written by Austin Appleby, and is placed in the public
@@ -116,4 +124,5 @@ uint32_t murmur16(uint64_t data1, uint64_t data2)
 	return h1;
 }
 
-#endif
+#endif // MURMUR_IMPLEMENTATION
+#endif // INCLUDE_MURMUR3_HASH_H
